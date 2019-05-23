@@ -9,14 +9,11 @@ install:
 run:
   steps:
     - apt -q -y install libxml2 libxml2-dev bison flex libcdk5-dev libavahi-client-dev cmake git
-    - cd acme-cli
-    - ./acme-cli -s 10.65.34.1 info 8
-    - cd ..
     - cd acme-utils/pyacmecapture
     - apt -q -y install python python-libiio python-numpy python-colorama
     - apt -q -y install iputils-ping
-    - mkdir testcaptures
     - lava-send lava_start
     - ./pyacmecapture.py --ip 10.65.34.1 -d 50 -s 8 -o test3 -od .
     - lava-sync clients
+    - cd ../..
     - ./scripts/mesure.sh 
