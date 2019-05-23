@@ -17,5 +17,6 @@ run:
     - lava-sync clients
     - cd ../.. 
     - cp work/mesure.sh acme-utils/pyacmecapture
-    - ./acme-utils/pyacmecapture/mesure.sh 
+    - cd acme-utils/pyacmecapture
+    - ./mesure.sh 
     - cat acme-utils/pyacmecapture/test4_Slot_8.csv
