@@ -15,6 +15,5 @@ run:
     - lava-send lava_start
     - ./pyacmecapture.py --ip 10.65.34.1 -d 50 -s 8 -o test3 -od .
     - lava-sync clients
-    - cd ../..
-    - ./scripts/mesure.sh 
+    - ./work/mesure.sh 
     - cat acme-utils/pyacmecapture/test4_Slot_8.csv
